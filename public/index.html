@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>AI Overview — Evidence-Based AI</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/static/styles.css?v=10">
+</head>
+<body class="theme-dark">
+    <!-- Ambient Background Glow Effects -->
+    <div class="ambient-glow glow-top-left"></div>
+    <div class="ambient-glow glow-center"></div>
+    <div class="ambient-glow glow-bottom-right"></div>
+
+    <div class="app-layout">
+        <!-- ==================== LEFT SIDEBAR (DESKTOP) ==================== -->
+        <aside class="sidebar-left" id="leftSidebar">
+            <div class="sidebar-header">
+                <div class="brand-logo" id="brandLogoHome" role="button" title="Bosh sahifaga qaytish">
+                    <span class="sparkle-icon">✦</span>
+                    <span class="brand-name">AI Overview</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-view="home" id="navHome" title="Bosh sahifa">
+                    <!-- Heroicons 24/outline: home -->
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <span>Bosh sahifa</span>
+                </button>
+                <button class="nav-item" data-view="search" id="navSearch" title="Yangi qidiruv">
+                    <!-- Heroicons 24/outline: magnifying-glass -->
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    <span>Qidiruv</span>
+                </button>
+                <button class="nav-item" data-view="history" id="navHistory" title="Qidiruvlar tarixi">
+                    <!-- Heroicons 24/outline: clock -->
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <span>Tarix</span>
+                </button>
+                <button class="nav-item" data-view="settings" id="navSettings" title="Sozlamalar">
+                    <!-- Heroicons 24/outline: cog-6-tooth -->
+                    <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 0 1 0 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <span>Sozlamalar</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-info-badge">
+                    <span class="info-dot"></span>
+                    <span>AI Tahlil & Jonli Qidiruv</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ==================== MAIN CONTENT AREA ==================== -->
+        <div class="main-wrapper">
+            <!-- Desktop Top Bar -->
+            <header class="top-header" id="topHeader">
+                <div class="top-search-container">
+                    <svg class="search-lens-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    <input 
+                        type="text" 
+                        class="top-search-input" 
+                        id="topSearchInput" 
+                        placeholder="Savol yoki mavzuni kiriting..."
+                        autocomplete="off"
+                    >
+                    <span class="shortcut-pill">Ctrl + Enter</span>
+                    <button class="top-send-btn" id="topSendBtn" title="Javob olish">
+                        <!-- Heroicons 24/solid: arrow-right -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="top-header-actions">
+                    <!-- Custom Flag + Country Name Dropdown (Replaces native select) -->
+                    <div class="custom-lang-dropdown" id="customLangDropdown">
+                        <button class="lang-trigger-btn" id="langTriggerBtn" type="button" aria-haspopup="true">
+                            <span class="flag-icon" id="currentFlag">🇺🇿</span>
+                            <span class="lang-text" id="currentLangText">O'zbekcha</span>
+                            <svg class="dropdown-chevron-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                        <div class="lang-menu-dropdown hidden" id="langMenuDropdown">
+                            <div class="lang-menu-item active" data-lang="uz" data-flag="🇺🇿" data-name="O'zbekcha">
+                                <span class="flag">🇺🇿</span>
+                                <span class="name">O'zbekcha (UZ)</span>
+                                <span class="check-mark">✓</span>
+                            </div>
+                            <div class="lang-menu-item" data-lang="ru" data-flag="🇷🇺" data-name="Русский">
+                                <span class="flag">🇷🇺</span>
+                                <span class="name">Русский (RU)</span>
+                                <span class="check-mark">✓</span>
+                            </div>
+                            <div class="lang-menu-item" data-lang="en" data-flag="🇬🇧" data-name="English">
+                                <span class="flag">🇬🇧</span>
+                                <span class="name">English (EN)</span>
+                                <span class="check-mark">✓</span>
+                            </div>
+                            <div class="lang-menu-item" data-lang="auto" data-flag="🌐" data-name="Avtomatik">
+                                <span class="flag">🌐</span>
+                                <span class="name">Avtomatik (Auto)</span>
+                                <span class="check-mark">✓</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dark / Light Mode Switch in Header -->
+                    <button class="header-theme-toggle" id="headerThemeToggle" title="Mavzuni almashtirish">
+                        <!-- Heroicons sun / moon -->
+                        <span class="theme-sun-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                            </svg>
+                        </span>
+                        <span class="theme-moon-wrap">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <!-- Notification icon -->
+                    <button class="icon-circle-btn" id="btnNotification" title="Bildirishnomalar">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                        </svg>
+                        <span class="notif-dot"></span>
+                    </button>
+
+                    <!-- User Avatar -->
+                    <div class="user-avatar" title="Foydalanuvchi hisobi">A</div>
+                </div>
+            </header>
+
+            <!-- Mobile Top Header (Status Bar Friendly) -->
+            <header class="mobile-header">
+                <div class="mobile-brand">
+                    <span class="sparkle-icon">✦</span>
+                    <span class="brand-name">AI Overview</span>
+                </div>
+                <div class="mobile-header-actions">
+                    <button class="mobile-theme-btn" id="mobileThemeToggle" title="Mavzu">
+                        <svg class="sun-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>
+                    </button>
+                    <div class="user-avatar small">A</div>
+                </div>
+            </header>
+
+            <!-- Scrollable View Container -->
+            <main class="view-container" id="viewContainer">
+                <!-- VIEW 1: HOME / QUERY VIEW -->
+                <div class="view-page active" id="homeView">
+                    <!-- MOBILE ONLY INPUT CARD (Hidden on Desktop) -->
+                    <section class="card mobile-only-search-card" id="mobileSearchCard">
+                        <div class="card-top-row">
+                            <label class="query-input-label" for="factInput">
+                                <svg class="lens-mini-svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                </svg>
+                                <span>Savol yoki mavzuni kiriting</span>
+                            </label>
+                            <div class="mobile-lang-chip" id="mobileLangTrigger">
+                                <span id="mobileFlag">🇺🇿</span>
+                                <span id="mobileLangText">O'zbekcha</span>
+                                <span class="arrow-down">▾</span>
+                            </div>
+                        </div>
+
+                        <div class="textarea-box">
+                            <textarea 
+                                id="factInput" 
+                                class="main-textarea" 
+                                rows="3" 
+                                placeholder="Savol yoki tekshirmoqchi bo'lgan mavzuni kiriting..."
+                                maxlength="5000"
+                            ></textarea>
+                            <div class="char-count-pill"><span id="charCount">0</span> / 5000</div>
+                        </div>
+
+                        <!-- Presets on Mobile -->
+                        <div class="presets-section">
+                            <span class="presets-label">SINOV NAMUNALARI:</span>
+                            <div class="presets-grid">
+                                <button class="preset-pill" data-text="O'zbekistonda 2027-yildan barcha talabalar bepul iPhone oladi.">
+                                    <span>📱</span> Bepul iPhone (Foyd)
+                                </button>
+                                <button class="preset-pill" data-text="Jizzax viloyati 1973-yil 28-dekabrda tashkil etilgan.">
+                                    <span>📊</span> Jizzax viloyati
+                                </button>
+                                <button class="preset-pill" data-text="Yer Quyosh atrofida aylanadi.">
+                                    <span>📍</span> Yer va Quyosh
+                                </button>
+                                <button class="preset-pill" data-text="Bu dori barcha kasalliklarni 100% davolaydi.">
+                                    <span>🔥</span> Mojizaviy dori
+                                </button>
+                                <button class="preset-pill" data-text="Limon va iliq suv barcha saraton kasalliklarini butunlay yo'q qiladi.">
+                                    <span>🍋</span> Limon va Saraton
+                                </button>
+                                <button class="preset-pill" data-text="Yer Quyosh atrofida aylanadi. Toshkent O'zbekistonning poytaxti hisoblanadi.">
+                                    <span>🔗</span> Bir nechta da'vo
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="query-card-footer">
+                            <button class="btn-gradient-submit" id="mobileCheckBtn">
+                                <span class="btn-text">Javob olish</span>
+                                <span class="btn-sparkle">✦</span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- DESKTOP HERO WELCOME (Visible before search) -->
+                    <section class="card desktop-welcome-card" id="desktopWelcomeCard">
+                        <div class="welcome-sparkle-hero">✦</div>
+                        <h2 class="welcome-title">AI Overview — Manbalarga asoslangan javoblar</h2>
+                        <p class="welcome-desc">
+                            Yuqoridagi qidiruv maydoniga savol yozing yoki quyidagi sinov namunalaridan birini tanlang.
+                            Tizim internet va Vikipediyani tahlil qilib, havolalar bilan tasdiqlangan javob tayyorlaydi.
+                        </p>
+                        <div class="welcome-presets-row">
+                            <span class="welcome-presets-title">Sinov namunalari:</span>
+                            <div class="presets-grid">
+                                <button class="preset-pill" data-text="O'zbekistonda 2027-yildan barcha talabalar bepul iPhone oladi.">
+                                    <span>📱</span> Bepul iPhone (Foyd)
+                                </button>
+                                <button class="preset-pill" data-text="Jizzax viloyati 1973-yil 28-dekabrda tashkil etilgan.">
+                                    <span>📊</span> Jizzax viloyati
+                                </button>
+                                <button class="preset-pill" data-text="Yer Quyosh atrofida aylanadi.">
+                                    <span>📍</span> Yer va Quyosh
+                                </button>
+                                <button class="preset-pill" data-text="Bu dori barcha kasalliklarni 100% davolaydi.">
+                                    <span>🔥</span> Mojizaviy dori
+                                </button>
+                                <button class="preset-pill" data-text="Limon va iliq suv barcha saraton kasalliklarini butunlay yo'q qiladi.">
+                                    <span>🍋</span> Limon va Saraton
+                                </button>
+                                <button class="preset-pill" data-text="Yer Quyosh atrofida aylanadi. Toshkent O'zbekistonning poytaxti hisoblanadi.">
+                                    <span>🔗</span> Bir nechta da'vo
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Loading Skeleton State -->
+                    <section class="card loading-skeleton-card hidden" id="loadingSection">
+                        <div class="skeleton-header">
+                            <div class="skeleton-shimmer shimmer-sparkle"></div>
+                            <div class="skeleton-shimmer shimmer-title"></div>
+                            <div class="skeleton-shimmer shimmer-badge"></div>
+                        </div>
+                        <div class="skeleton-body">
+                            <div class="skeleton-shimmer shimmer-line line-full"></div>
+                            <div class="skeleton-shimmer shimmer-line line-90"></div>
+                            <div class="skeleton-shimmer shimmer-line line-75"></div>
+                        </div>
+                        <div class="loading-pipeline-indicator">
+                            <div class="pipeline-spinner"></div>
+                            <div class="pipeline-status">
+                                <span class="pipeline-text" id="pipelineStatusText">Manbalar qidirilmoqda va AI tahlil qilinmoqda...</span>
+                                <div class="pipeline-dots">
+                                    <span class="p-dot active" id="dot1"></span>
+                                    <span class="p-dot" id="dot2"></span>
+                                    <span class="p-dot" id="dot3"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Error Banner -->
+                    <div class="card error-banner-card hidden" id="errorBanner">
+                        <span class="error-icon">⚠️</span>
+                        <div class="error-content">
+                            <h4 class="error-title">Xatolik</h4>
+                            <p class="error-desc" id="errorMessage">Ma'lumot olishda xatolik yuz berdi.</p>
+                        </div>
+                        <button class="btn-close-error" id="dismissErrorBtn">×</button>
+                    </div>
+
+                    <!-- REAL DATA RESULTS CONTAINER (Hidden until search is performed) -->
+                    <div class="content-columns results-wrapper hidden" id="resultsWrapper">
+                        <!-- CENTER FEED COLUMN -->
+                        <div class="center-feed">
+                            <!-- Main AI Overview Result Card -->
+                            <section class="card overview-result-card" id="overviewCard">
+                                <div class="overview-header-row">
+                                    <div class="overview-title-badge">
+                                        <span class="sparkle-glow">✦</span>
+                                        <h2 class="overview-heading">AI Overview</h2>
+                                    </div>
+                                    <div class="overview-meta-pill" id="overviewStatusBadge">
+                                        <span class="status-icon">✓</span>
+                                        <span class="status-text">Yangilangan</span>
+                                    </div>
+                                </div>
+
+                                <div class="overview-article-title" id="ovTitle"></div>
+
+                                <div class="overview-text-content" id="ovIntro"></div>
+
+                                <ul class="overview-bullet-points hidden" id="ovBullets"></ul>
+
+                                <div class="overview-empty-note hidden" id="ovMessage"></div>
+
+                                <!-- Presets inside Card for quick refinement -->
+                                <div class="overview-card-chips-box" id="cardChipsBox">
+                                    <div class="chips-box-header">
+                                        <span class="layers-icon">📚</span>
+                                        <span>Boshqa mavzular</span>
+                                    </div>
+                                    <div class="chips-row">
+                                        <button class="mini-chip" data-text="O'zbekistonda 2027-yildan barcha talabalar bepul iPhone oladi.">
+                                            <span>📱</span> Bepul iPhone
+                                        </button>
+                                        <button class="mini-chip" data-text="Jizzax viloyati 1973-yil 28-dekabrda tashkil etilgan.">
+                                            <span>📊</span> Jizzax viloyati
+                                        </button>
+                                        <button class="mini-chip" data-text="Yer Quyosh atrofida aylanadi.">
+                                            <span>📍</span> Yer va Quyosh
+                                        </button>
+                                        <button class="mini-chip" data-text="Bu dori barcha kasalliklarni 100% davolaydi.">
+                                            <span>🔥</span> Mojizaviy dori
+                                        </button>
+                                        <button class="mini-chip" data-text="Limon va iliq suv barcha saraton kasalliklarini butunlay yo'q qiladi.">
+                                            <span>🍋</span> Limon va Saraton
+                                        </button>
+                                        <button class="mini-chip" data-text="Yer Quyosh atrofida aylanadi. Toshkent O'zbekistonning poytaxti hisoblanadi.">
+                                            <span>🔗</span> Bir necha da'vo
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Expand / Collapse Chevron -->
+                                <button class="btn-expand-overview" id="btnExpandOverview" title="To'liq o'qish">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                            </section>
+
+                            <!-- Real Sources Section -->
+                            <section class="card sources-container-card" id="sourcesCard">
+                                <div class="sources-card-header">
+                                    <div class="sources-title-group">
+                                        <span class="star-accent-icon">★</span>
+                                        <h3 class="sources-heading">Manbalar</h3>
+                                    </div>
+                                    <button class="sources-view-all-link" id="btnToggleAllSources">
+                                        <span id="sourcesCountBadge">0 ta manba</span>
+                                        <span class="chevron-right">›</span>
+                                    </button>
+                                </div>
+
+                                <div class="sources-list-grid" id="displaySourcesList"></div>
+                            </section>
+                        </div>
+
+                        <!-- RIGHT SIDEBAR (DESKTOP) -->
+                        <aside class="sidebar-right" id="rightSidebar">
+                            <!-- Card 1: Mavzuga oid (Real Related Articles from Search) -->
+                            <div class="card right-panel-card related-articles-card" id="relatedArticlesCard">
+                                <div class="right-card-header">
+                                    <h4 class="right-card-title">Mavzuga oid</h4>
+                                </div>
+                                <div class="related-articles-list" id="relatedArticlesList"></div>
+                            </div>
+
+                            <!-- Card 2: Bilasizmi? (Real Fact from Search) -->
+                            <div class="card right-panel-card did-you-know-card">
+                                <div class="did-you-know-header">
+                                    <!-- Heroicons solid lightbulb -->
+                                    <div class="bulb-icon-wrap">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#facc15" width="22" height="22">
+                                            <path d="M12 .75a8.25 8.25 0 0 0-4.135 15.39c.686.398 1.115 1.008 1.135 1.68v.18c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.18c.02-.672.45-1.282 1.135-1.68A8.25 8.25 0 0 0 12 .75Zm-2.25 20.25a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5Z" />
+                                        </svg>
+                                    </div>
+                                    <h4 class="right-card-title">Bilasizmi?</h4>
+                                </div>
+                                <p class="did-you-know-desc" id="didYouKnowText"></p>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+
+                <!-- VIEW 2: SEARCH HISTORY VIEW -->
+                <div class="view-page" id="historyView">
+                    <div class="history-page-card card">
+                        <div class="history-header">
+                            <div class="history-title-group">
+                                <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                <h3>Qidiruvlar tarixi</h3>
+                            </div>
+                            <button class="btn-clear-history" id="btnClearHistory">Tarixni tozalash</button>
+                        </div>
+                        <div class="history-list" id="historyList">
+                            <div class="empty-history-placeholder">Hozircha qidiruvlar tarixi bo'sh.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIEW 3: SETTINGS VIEW -->
+                <div class="view-page" id="settingsView">
+                    <div class="settings-page-card card">
+                        <div class="settings-header">
+                            <svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 0 1 0 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                            <h3>Ilova sozlamalari</h3>
+                        </div>
+                        <div class="settings-form">
+                            <div class="setting-item">
+                                <label class="setting-label">Mavzuni tanlang</label>
+                                <div class="theme-choice-row">
+                                    <button class="theme-choice-btn active" id="btnThemeDark">Tungi (Dark)</button>
+                                    <button class="theme-choice-btn" id="btnThemeLight">Kunduzgi (Light)</button>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <label class="setting-label">Tizim va AI integratsiyasi</label>
+                                <div class="system-status-box">
+                                    <div class="status-indicator-row">
+                                        <span class="status-dot green"></span>
+                                        <span>FastAPI Server: Faol (200 OK)</span>
+                                    </div>
+                                    <div class="status-indicator-row">
+                                        <span class="status-dot green"></span>
+                                        <span>AI Tahlil moduli: Ulangan</span>
+                                    </div>
+                                    <div class="status-indicator-row">
+                                        <span class="status-dot green"></span>
+                                        <span>Wikipedia & DuckDuckGo: Faol</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- ==================== MOBILE BOTTOM NAVIGATION BAR ==================== -->
+            <nav class="mobile-bottom-nav" id="bottomNav">
+                <button class="bnav-item active" data-view="home" id="bnavHome">
+                    <svg class="bnav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                    <span class="bnav-label">Bosh sahifa</span>
+                </button>
+                <button class="bnav-item" data-view="search" id="bnavSearch">
+                    <svg class="bnav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                    </svg>
+                    <span class="bnav-label">Qidiruv</span>
+                </button>
+                <button class="bnav-item" data-view="history" id="bnavHistory">
+                    <svg class="bnav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <span class="bnav-label">Tarix</span>
+                </button>
+                <button class="bnav-item" data-view="settings" id="bnavSettings">
+                    <svg class="bnav-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 0 1 0 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <span class="bnav-label">Sozlamalar</span>
+                </button>
+
+                <!-- iOS Home Indicator bar -->
+                <div class="ios-home-bar"></div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/app.js?v=10"></script>
+</body>
+</html>
