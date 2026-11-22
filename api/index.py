@@ -13,25 +13,19 @@ if str(BACKEND_DIR) not in sys.path:
 
 from backend.app.main import app
 
-# Duplicating routes without '/api' prefix as well, so requests work regardless of how Vercel rewrites them
+# Ensure all routes work both with and without /api prefix
+existing_paths = {r.path for r in app.routes if hasattr(r, "path")}
+
 for route in list(app.routes):
-    if hasattr(route, "path") and route.path.startswith("/api/"):
-        alt_path = route.path[4:]  # e.g. '/api/health' -> '/health', '/api/overview' -> '/overview'
-        # Add alias route
-        if hasattr(route, "methods"):
+    p = getattr(route, "path", "")
+    if p.startswith("/api/"):
+        alt_path = p[4:]  # '/api/overview' -> '/overview'
+        if alt_path not in existing_paths:
+            existing_paths.add(alt_path)
             app.add_api_route(
                 alt_path,
                 route.endpoint,
-                methods=route.methods,
+                methods=getattr(route, "methods", ["GET"]),
                 response_model=getattr(route, "response_model", None),
                 include_in_schema=False
             )
-
-@app.get("/api/debug")
-@app.get("/debug")
-def debug_endpoint(request: Request):
-    return {
-        "url_path": request.url.path,
-        "scope_path": request.scope.get("path"),
-        "root_path": request.scope.get("root_path")
-    }
