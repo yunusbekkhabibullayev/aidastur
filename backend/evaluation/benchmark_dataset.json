@@ -1,0 +1,93 @@
+[
+  {
+    "id": "tc-01",
+    "claim": "Yer Quyosh atrofida aylanadi.",
+    "expected_verdict": "TRUE",
+    "category": "science",
+    "language": "uz",
+    "known_source": "Ilmiy astronomik manbalar",
+    "expected_explanation": "Kopernik geliotsentrik nazariyasi va zamonaviy astronomiya buni to'liq tasdiqlaydi."
+  },
+  {
+    "id": "tc-02",
+    "claim": "O'zbekiston 1991-yil 1-sentabrda o'z mustaqilligini e'lon qilgan.",
+    "expected_verdict": "TRUE",
+    "category": "history",
+    "language": "uz",
+    "known_source": "lex.uz, rasmiy davlat portali",
+    "expected_explanation": "O'zbekiston Respublikasi Mustaqillik kuni rasman 1991-yil 1-sentabr."
+  },
+  {
+    "id": "tc-03",
+    "claim": "O'zbekistonda 2027-yildan barcha talabalar bepul iPhone oladi.",
+    "expected_verdict": "FALSE",
+    "category": "society",
+    "language": "uz",
+    "known_source": "Rasmiy ta'lim vazirligi",
+    "expected_explanation": "Bunday davlat qarori yoki rasmiy farmon mavjud emas, feyk xabar."
+  },
+  {
+    "id": "tc-04",
+    "claim": "Inson tanasida 5 ta yurak bor.",
+    "expected_verdict": "FALSE",
+    "category": "health",
+    "language": "uz",
+    "known_source": "Tibbiy anatomiya",
+    "expected_explanation": "Inson anatomiyasida faqat bitta 4 kamerali yurak mavjud."
+  },
+  {
+    "id": "tc-05",
+    "claim": "Bu dori barcha kasalliklarni 100% davolaydi.",
+    "expected_verdict": "FALSE",
+    "category": "health",
+    "language": "uz",
+    "known_source": "WHO / JSST",
+    "expected_explanation": "Barcha kasalliklarni 100% davolovchi universal dori mavjud emas."
+  },
+  {
+    "id": "tc-06",
+    "claim": "Limon va iliq suv saratonni butunlay yo'q qiladi.",
+    "expected_verdict": "MISLEADING",
+    "category": "health",
+    "language": "uz",
+    "known_source": "Tibbiy tadqiqotlar",
+    "expected_explanation": "Limon vitaminlarga boy bo'lsa-da, onkologik kasallikni butunlay yo'q qilishi ilmiy tasdiqlanmagan, chalg'ituvchi kontekst."
+  },
+  {
+    "id": "tc-07",
+    "claim": "Kelasi oy butun dunyoda internet 3 kunga butunlay o'chiriladi.",
+    "expected_verdict": "UNVERIFIED",
+    "category": "technology",
+    "language": "uz",
+    "known_source": "None",
+    "expected_explanation": "Ushbu da'voni tasdiqlovchi rasmiy texnik yoki xalqaro dalil topilmadi."
+  },
+  {
+    "id": "tc-08",
+    "claim": "The Earth orbits around the Sun.",
+    "expected_verdict": "TRUE",
+    "category": "science",
+    "language": "en",
+    "known_source": "NASA, Astronomy journals",
+    "expected_explanation": "Planetary physics confirms Earth orbits the Sun in approximately 365.25 days."
+  },
+  {
+    "id": "tc-09",
+    "claim": "Drinking bleach completely cures viral infections safely.",
+    "expected_verdict": "FALSE",
+    "category": "health",
+    "language": "en",
+    "known_source": "CDC, WHO",
+    "expected_explanation": "Bleach is a corrosive toxic substance and does not cure viruses."
+  },
+  {
+    "id": "tc-10",
+    "claim": "Вода закипает при 100 градусах Цельсия при стандартном атмосферном давлении.",
+    "expected_verdict": "TRUE",
+    "category": "science",
+    "language": "ru",
+    "known_source": "Физические справочники",
+    "expected_explanation": "Стандартная температура кипения чистой воды при 1 атм составляет 100 °C."
+  }
+]
+
